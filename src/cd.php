@@ -5,10 +5,10 @@
     private $artist;
     private $album;
 
-  function _construct($cd_artist, $cd_album)
+  function __construct($cd_artist, $cd_album)
   {
-    $this->artist = $artist;
-    $this->album = $album;
+    $this->artist = $cd_artist;
+    $this->album = $cd_album;
   }
   function setArtist($new_artist)
   {
@@ -38,7 +38,7 @@
   {
     $_SESSION['list_of_cds'] = array();
   }
-  
+
 }
 
 ?>
