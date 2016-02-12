@@ -10,14 +10,21 @@
       <p>CD Library List:</p>
       <ul>
         {% for new_cd in cd %}
-            <li>{{ new_cd.getArtist }}</li>
-            <li>{{ new_cd.getAlbum }}</li>
+            <li>Artist: {{ new_cd.getArtist }}</li>
+            <li>Album: {{ new_cd.getAlbum }}</li>
         {% endfor %}
       </ul>
     {% endif %}
 
     <form action='/delete' method='post'>
         <button type='submit'>Clear CDs</button>
+    </form>
+
+    <h1>Search Your Library By Artist</h1>
+    <form action="/search" method="get">
+      <label for="search"></label>
+        <input id="search" type="text" name"search">
+        <button type="submit">Search</button>
     </form>
   </body>
 </html>

@@ -26,6 +26,17 @@
           return $app['twig']->render('library.html.twig', array('library_cd' => $new_cd));
       });
 
+      $app->post('/search', function() use($app){
+        $results = array();
+        $searched_artist = ($_POST['search']);
+          foreach($_SESSION['list_of_cds'] as $cd){
+            if($cd->getArtist() == $searched_artist){
+              array_push($results, $cd);
+            }
+          }
+        return $app['twig']->render('search_result.html.twig', array('artist_list' => $results));
+      });
+
       $app->post('/delete', function() use ($app) {
           CD::deleteAll();
           return $app['twig']->render('delete_cd.html.twig');
