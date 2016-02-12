@@ -28,7 +28,7 @@
 
       $app->post('/search', function() use($app){
         $results = array();
-        $searched_artist = ($_POST['search']);
+        $searched_artist = $_POST['search'];
           foreach($_SESSION['list_of_cds'] as $cd){
             if($cd->getArtist() == $searched_artist){
               array_push($results, $cd);

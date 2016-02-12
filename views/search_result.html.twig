@@ -5,17 +5,9 @@
   </head>
   <body>
       <h1>CDs matching search</h1>
-       {% if cd is not empty %}
-           <p>Search Results:</p>
-           <li>{{ search.getArtist }}</li>
-           {% for search in cd %}
-                {% if search == cd.getArtist %}
-                      <li>{{ artist.getArtist }}</li>
-                      <li>{{ search.getAlbum }}</li>
-                  {% endif %}
-           {% endfor %}
-       {% endif %}
-
-
+      {% for artist in artist_list %}
+         <h5>Artist: {{ artist.getArtist }}</h5>
+         <h5>Ablum: {{ artist.getAlbum }}</h5>
+       {% endfor %}
   </body>
 </html>
