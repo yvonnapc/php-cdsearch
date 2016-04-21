@@ -35,11 +35,11 @@ If you have any issues, questions, ideas, or concerns contact me through GitHUb.
 
 ## Technologies Used
 
-• HTML
-• CSS
-• PHP
-• mySQL
-• Silex
+• HTML<br>
+• CSS<br>
+• PHP<br>
+• mySQL<br>
+• Silex<br>
 
 ## License
 
